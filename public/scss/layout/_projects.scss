@@ -1,0 +1,19 @@
+.projects {
+  width: 100%;
+  height: 600px;
+  background-color: color(accent-2);
+
+  &__head {
+    width: 85%;
+    height: 110px;
+    margin: 0 auto;
+    border-bottom: 1px solid color(accent-5);
+  }
+
+  &__title {
+    text-align: center;
+    color: color(accent-5);
+    font-size: 40px;
+    padding: 35px;
+  }
+}

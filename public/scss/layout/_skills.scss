@@ -1,0 +1,53 @@
+.skills {
+  width: 100%;
+  height: 600px;
+  background-color: color(accent-1);
+
+  &__head {
+    width: 85%;
+    height: 110px;
+    margin: 0 auto;
+    border-bottom: 1px solid color(secondary);
+  }
+
+  &__title {
+    text-align: center;
+    color: color(primary);
+    font-size: 40px;
+    padding: 35px;
+  }
+
+  &__section {
+    width: 50%;
+    float: left;
+    padding: 5px 20px;
+    height: 200px;
+    margin-top: 40px;
+  }
+
+  &__progress {
+    width: 0;
+    height: 10px;
+    background: color(primary);
+    border-radius: 5px;
+    float: left;
+    transition: .5s;
+  }
+
+  &__progress-wrap {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    float: right;
+    background: color(accent-2);
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    font-size: 14px;
+    color: color(primary);
+    margin-bottom: 10px;
+    text-align: right;
+  }
+}
