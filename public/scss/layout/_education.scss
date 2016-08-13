@@ -3,6 +3,20 @@
   height: 600px;
   background-color: color(primary);
 
+  &__content {
+
+  }
+
+  &__unordered-list {
+    color: white;
+    display: block;
+  }
+
+  &__item {
+    display: block;
+    color: color(accent-5);
+  }
+
   &__head {
     width: 85%;
     height: 110px;
@@ -18,11 +32,17 @@
   }
 
   &__image-wrap {
-    width: 30%;
-    height: 200px;
-    float: right;
-    background-image: url(../images/utah_state_logo.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
+    width: 250px;
+    float: left;
+    padding: 20px;
+    animation: wiggle 2s infinite linear;
+  }
+
+  @keyframes wiggle {
+    0% { transform: rotateZ(0deg); }
+    25% { transform: rotateZ(-5deg); }
+    50% { transform: rotateZ(0deg); }
+    75% { transform: rotateZ(5deg); }
+    100% { transform: rotateZ(0deg); }
   }
 }

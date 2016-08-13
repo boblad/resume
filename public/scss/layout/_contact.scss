@@ -6,7 +6,7 @@
   &__head {
     width: 85%;
     height: 110px;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
     border-bottom: 1px solid color(accent-5);
   }
 
@@ -15,5 +15,29 @@
     color: color(secondary);
     font-size: 40px;
     padding: 35px;
+  }
+
+  &__input-wrap {
+    width: 80%;
+    height: 40px;
+    margin: 10px auto;
+
+  }
+
+  &__label {
+    color: color(accent-5);
+    width: 40%;
+    float: right;
+    text-align: right;
+    padding: 12px;
+  }
+
+  &__input {
+    color: color(primary);
+    width: 60%;
+    float: right;
+    height: 40px;
+    border: 2px solid color(secondary);
+    border-radius: 5px;
   }
 }

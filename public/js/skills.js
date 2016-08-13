@@ -11,9 +11,13 @@
          var profileT = $('.profile').offset().top;
          var profileH = $('.profile').outerHeight();
 
-          if (wS > (profileT+profileH-wH - 300)) {
-               $('.profile').removeClass('flipped');
-           }
+         var experienceT = $('.experience__content').offset().top;
+         var experienceH = $('.experience__content').outerHeight();
+
+         if (wS > (profileT+profileH-wH - 300)) {
+            $('.profile').removeClass('flipped');
+         }
+
 
          if (wS > (skillsT+skillsH-wH)) {
            window.setTimeout(function() {
@@ -28,6 +32,10 @@
              $('#php').addClass('level-4');
              $('#rails').addClass('level-3');
            }, 400)
+         }
+
+         if (wS > (experienceT+experienceH-wH)) {
+           $('.experience__content').addClass('experience__show');
          }
       });
 
