@@ -62,6 +62,11 @@
     height: 40px;
     border: 2px solid #41a7f2;
     border-radius: 5px; }
+    .contact__input:focus {
+      outline: none !important;
+      border: 2px solid #3489ec; }
+  .contact__focussed {
+    border: 2px solid #3489ec; }
 
 .content {
   width: 100%;
@@ -243,6 +248,15 @@
     margin: 0 auto;
     border-radius: 50%;
     border: 5px solid #2dbdb9; }
+  .profile__paragraph-wrap {
+    border-radius: 10px;
+    background: #41a7f2;
+    padding: 0 10px; }
+  .profile__paragraph {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    background: #41a7f2; }
   .profile__title {
     font-size: 25px;
     margin-bottom: 20px; }

@@ -30,6 +30,19 @@
     border: 5px solid color(accent-2);
   }
 
+  &__paragraph-wrap {
+    border-radius: 10px;
+    background: color(secondary);
+    padding: 0 10px;
+  }
+
+  &__paragraph {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    background: color(secondary);
+  }
+
   &__title {
     font-size: 25px;
     margin-bottom: 20px;

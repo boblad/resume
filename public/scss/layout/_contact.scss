@@ -39,5 +39,15 @@
     height: 40px;
     border: 2px solid color(secondary);
     border-radius: 5px;
+
+    &:focus {
+
+    outline: none !important;
+    border: 2px solid color(accent-1);
+    }
+  }
+
+  &__focussed {
+    border: 2px solid color(accent-1);
   }
 }
