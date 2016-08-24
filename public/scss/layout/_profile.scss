@@ -1,46 +1,63 @@
 .profile {
   width: 100%;
-  padding: 10px;
-  background: color(accent-5);
-  color: color(primary);
+  padding: 20px;
+  background: color(primary);
+  color: color(accent-5);
   text-align: center;
   font-size: 30px;
-  padding: 30px;
-  height: 600px;
+  padding: 45px;
+  height: 800px;
   transition: .5s;
+
 
   &__head {
     width: 85%;
-    height: 80px;
+    height: 120px;
     margin: 0 auto;
-    border-bottom: 1px solid color(accent-2);
+    border-bottom: 1px solid color(accent-5);
+    text-align: center;
+    font-size: 38px;
+    padding: 20px;
   }
 
   &__section {
-    width: 33%;
-    padding: 30px 10px 10px 10px;
-    float: left;
+    width: 100%;
+    margin-top: 40px;
     font-size: 16px;
+    position: relative;
+    padding-top: 110px;
   }
 
   &__image {
-    width: 80%;
-    margin: 0 auto;
-    border-radius: 50%;
-    border: 5px solid color(accent-2);
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    object-fit: cover;
+    border: 4px solid color(accent-1);
+  }
+
+  &__image-wrap {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: calc(50% - 125px);
+    top: 0;
   }
 
   &__paragraph-wrap {
-    border-radius: 10px;
-    background: color(secondary);
-    padding: 0 10px;
+    border-radius: 25px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 100px 15px 15px 15px;
+    border: 3px solid color(accent-1);
+    background: color(accent-5);
   }
 
   &__paragraph {
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 10px;
-    background: color(secondary);
+    color: color(accent-1);
   }
 
   &__title {

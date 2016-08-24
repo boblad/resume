@@ -11,11 +11,15 @@
          var profileT = $('.profile').offset().top;
          var profileH = $('.profile').outerHeight();
 
-         var experienceT = $('.experience__content').offset().top;
-         var experienceH = $('.experience__content').outerHeight();
+         var experienceT1 = $('#experience-1').offset().top;
+         var experienceH1 = $('#experience-1').outerHeight();
+
+         var experienceT2 = $('#experience-2').offset().top;
+         var experienceH2 = $('#experience-2').outerHeight();
 
          if (wS > (profileT+profileH-wH - 300)) {
-            $('.profile').removeClass('flipped');
+            $('.profile__absolute').removeClass('sit-left');
+            $('.profile__absolute').removeClass('sit-right');
          }
 
 
@@ -34,8 +38,12 @@
            }, 400)
          }
 
-         if (wS > (experienceT+experienceH-wH)) {
-           $('.experience__content').addClass('experience__show');
+         if (wS > (experienceT1+experienceH1-wH - 300)) {
+           $('#experience-1').removeClass('flipped');
+         }
+
+         if (wS > (experienceT2+experienceH2-wH - 300)) {
+           $('#experience-2').removeClass('flipped');
          }
       });
 

@@ -29,6 +29,10 @@ app.get('/', function(req, res) {
   res.render('layout', {});
 })
 
+app.post('/', function(req, res) {
+  res.send('hi')
+})
+
 
 app.listen(3011, function() {
   console.log('listening on port 3011')

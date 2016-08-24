@@ -1,13 +1,27 @@
 .header {
   width: 100%;
-  height: 100vh;
-  background: color(primary);
+  height: 50vh;
+  object-fit: contain;
+  position: relative;
+  background: url("../images/code-image.png");
+  background-position: 50% 50%;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
   color: color(accent-5);
+  -webkit-font-smoothing: antialiased;
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
 
   &__title {
     font-size: 45px;

@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Console';
+    font-family: 'Helvetica';
+    font-weight: 400;
 }
 
 .wrap {
   width: 100%;
+  overflow: hidden;
 }

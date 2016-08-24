@@ -1,35 +1,99 @@
 .experience {
   position: relative;
   width: 100%;
-  height: 600px;
-  background-color: color(accent-2);
+  height: 650px;
+  background-color: color(primary);
 
   &__head {
     width: 85%;
     height: 110px;
     margin: 0 auto;
-    border-bottom: 1px solid color(secondary);
+    border-bottom: 1px solid color(accent-1);
   }
 
   &__title {
     text-align: center;
-    color: color(accent-5);
+    color: color(accent-2);
     font-size: 40px;
     padding: 35px;
   }
 
   &__content {
-    position: absolute;
-    width: 70%;
-    right: -70%;
+    width: 40%;
+    position: relative;
+    margin: 5%;
+    float: left;
     height: 400px;
-    top: 130px;
-    background: color(accent-1);
-    transition: .5s;
+    background: color(accent-5);
+    transition: .7s;
     border-radius: 15px;
+    border: 4px solid color(accent-2);
+    overflow: hidden;
+
+    &.flipped {
+      transform: rotateY(180deg);
+      opacity: 0;
+    }
+
+    @media screen and (max-width: breakpoint(tablet)) {
+      width: 90%;
+    }
   }
 
-  &__show {
-    right: 5%;
+  &__unordered-list {
+    padding: 10px;
+    list-style: none;
+  }
+
+  &__unordered-item {
+    padding: 5px 10px;
+    list-style: none;
+  }
+
+  &__item {
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  &__category {
+    padding: 10px 10px 0px 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &__relative-wrap {
+    position: relative;
+    width: 100%;
+  }
+
+  &__image-pxp {
+    position: absolute;
+    width: 50%;
+    bottom: -40px;
+    right: -20px;
+  }
+
+  &__image-fresh {
+    position: absolute;
+    width: 50%;
+    bottom: 30px;
+    right: 20px;
+  }
+
+  &__sub {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 2px solid color(primary);
+  }
+
+  &__sub-item {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  @media screen and (max-width: breakpoint(tablet)) {
+    height: 1100px;
   }
 }

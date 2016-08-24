@@ -24,7 +24,7 @@
         var seconds = normalizeTime(date.getSeconds());
 
         var timerText = prefixText + monthNames[monthIndex] + ' ' +
-        day + ', ' + year + ' ' + hours + ':' + minutes + ':' + seconds;
+        day + ', ' + year + ' (' + hours + ':' + minutes + ':' + seconds + ')';
 
         $('#todays-date').text(timerText);
       }
