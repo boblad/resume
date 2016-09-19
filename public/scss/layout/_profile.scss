@@ -51,6 +51,15 @@
     padding: 100px 15px 15px 15px;
     border: 3px solid color(accent-1);
     background: color(accent-5);
+    transition: 1s cubic-bezier(.87,-.41,.19,1.44);
+    overflow: hidden;
+
+    &.closed {
+      border: 0;
+      padding: 0;
+      width: 0;
+      height: 0;
+    }
   }
 
   &__paragraph {

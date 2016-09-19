@@ -18,23 +18,24 @@
          var experienceH2 = $('#experience-2').outerHeight();
 
          if (wS > (profileT+profileH-wH - 300)) {
-            $('.profile__absolute').removeClass('sit-left');
-            $('.profile__absolute').removeClass('sit-right');
+            $('.profile__paragraph-wrap').removeClass('closed');
          }
 
 
          if (wS > (skillsT+skillsH-wH)) {
            window.setTimeout(function() {
-             $('#react').addClass('level-10');
-             $('#react-native').addClass('level-10');
-             $('#javascript').addClass('level-10');
-             $('#html-skill').addClass('level-10');
-             $('#css-scss').addClass('level-10');
+             $('#react').addClass('level-9');
+             $('#react-native').addClass('level-9');
+             $('#javascript').addClass('level-9');
+             $('#html-skill').addClass('level-9');
+             $('#css-scss').addClass('level-9');
              $('#python').addClass('level-8');
-             $('#wordpress').addClass('level-8');
+             $('#c-plus-plus').addClass('level-8');
+             $('#wordpress').addClass('level-7');
+             $('#unix').addClass('level-7');
              $('#django').addClass('level-7');
-             $('#php').addClass('level-4');
-             $('#rails').addClass('level-3');
+             $('#php').addClass('level-5');
+             $('#rails').addClass('level-2');
            }, 400)
          }
 

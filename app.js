@@ -3,6 +3,8 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var hbs = require('hbs');
 var moment = require('moment');
+var nodemailer = require('nodemailer');
+var config = require('./config');
 
 var app = express();
 
@@ -24,6 +26,24 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
+var transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
+
+// setup e-mail data with unicode symbols
+var mailOptions = {
+    from: '"Resume" <'+ config.fromEmailUsername +'>', // sender address
+    to: config.emailUsername, // list of receivers
+    subject: 'Response ✔', // Subject line
+    text: 'Hello world 🐴', // plaintext body
+    html: '<b>Hello world 🐴</b>' // html body
+};
+
+// send mail with defined transport object
+transporter.sendMail(mailOptions, function(error, info){
+    if(error){
+        return console.log(error);
+    }
+    console.log('Message sent: ' + info.response);
+});
 
 app.get('/', function(req, res) {
   res.render('layout', {});
