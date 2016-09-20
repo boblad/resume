@@ -9,6 +9,11 @@ var nodemailer = require('nodemailer');
 var app = express();
 
 var ENV = process.env.NODE_ENV;
+var is_production = true;
+
+if (ENV === 'development') {
+  is_production = false;
+}
 app.locals.is_production = ENV !== 'development';
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -46,7 +51,9 @@ var transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp
 // });
 
 app.get('/', function(req, res) {
-  res.render('layout', {});
+  res.render('layout', {
+    is_production: is_production
+  });
 })
 
 app.post('/', function(req, res) {
