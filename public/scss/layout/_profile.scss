@@ -1,18 +1,17 @@
 .profile {
   width: 100%;
+  float: left;
   padding: 20px;
   background: color(primary);
   color: color(accent-5);
   text-align: center;
   font-size: 30px;
   padding: 45px;
-  height: 800px;
   transition: .5s;
 
 
   &__head {
     width: 85%;
-    height: 120px;
     margin: 0 auto;
     border-bottom: 1px solid color(accent-5);
     text-align: center;

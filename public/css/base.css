@@ -34,7 +34,16 @@
 .restrict {
   max-width: 1300px; }
 
+.res-clear:before,
+.res-clear:after {
+  content: " ";
+  display: table; }
+
+.res-clear:after {
+  clear: both; }
+
 .contact {
+  float: left;
   width: 100%;
   height: 900px;
   background-color: #45a6d0; }
@@ -176,11 +185,13 @@
         display: none; } }
 
 .content {
+  float: left;
   width: 100%;
   padding: 10px;
   background: #BB0A21; }
 
 .education {
+  float: left;
   width: 100%;
   height: 600px;
   background-color: white; }
@@ -284,6 +295,7 @@
       height: 950px; } }
 
 .experience {
+  float: left;
   position: relative;
   width: 100%;
   height: 650px;
@@ -358,6 +370,7 @@
       height: 1100px; } }
 
 .header {
+  float: left;
   width: 100%;
   height: 50vh;
   -o-object-fit: contain;
@@ -419,8 +432,9 @@
   overflow: hidden; }
 
 .personal {
+  float: left;
   width: 100%;
-  height: 600px; }
+  padding: 20px 0; }
   .personal__head {
     width: 85%;
     height: 110px;
@@ -432,7 +446,7 @@
     font-size: 25px;
     border-bottom: 1px solid #45a6d0;
     margin-bottom: 15px;
-    padding: 20px; }
+    padding: 10px 0; }
   .personal__title {
     text-align: center;
     color: #45a6d0;
@@ -441,18 +455,17 @@
 
 .profile {
   width: 100%;
+  float: left;
   padding: 20px;
   background: #45a6d0;
   color: white;
   text-align: center;
   font-size: 30px;
   padding: 45px;
-  height: 800px;
   -webkit-transition: .5s;
   transition: .5s; }
   .profile__head {
     width: 85%;
-    height: 120px;
     margin: 0 auto;
     border-bottom: 1px solid white;
     text-align: center;
@@ -505,6 +518,7 @@
             transform: rotateZ(180deg); }
 
 .projects {
+  float: left;
   width: 100%;
   height: 600px;
   background-color: #D6D2D2; }
@@ -520,6 +534,7 @@
     padding: 35px; }
 
 .skills {
+  float: left;
   width: 100%;
   height: 600px;
   background-color: white; }
@@ -568,13 +583,27 @@
       height: 865px; } }
 
 .work {
+  float: left;
   width: 100%;
-  height: 600px;
   background-color: #45a6d0; }
+  .work__content {
+    padding: 10px 10%; }
   .work__head {
     width: 85%;
     height: 110px;
     margin: 0 auto;
+    border-bottom: 1px solid #D6D2D2; }
+  .work__paragraph {
+    padding-top: 10px; }
+    .work__paragraph a {
+      text-decoration: none;
+      cursor: pointer;
+      color: #D6D2D2; }
+      .work__paragraph a:hover {
+        color: #BB0A21; }
+  .work__sub-head {
+    padding: 5px 0;
+    font-size: 24px;
     border-bottom: 1px solid #D6D2D2; }
   .work__title {
     text-align: center;

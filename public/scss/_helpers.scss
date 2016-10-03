@@ -36,3 +36,15 @@
 .restrict {
   max-width: 1300px;
 }
+
+
+
+.res-clear:before,
+.res-clear:after {
+  content: " ";
+  display: table;
+}
+
+.res-clear:after {
+  clear: both;
+}
