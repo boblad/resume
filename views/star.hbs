@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bryant Oblad</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  </head>
+  <body>
+
+    <div class="star">
+      <div class="star__wrap">
+        {{#each speeds}}
+        <div class="star__ball" style="animation: ball {{this}}s infinite ease-in-out;"></div>
+        {{/each}}
+        <div class="res-clear"></div>
+      </div>
+    </div>
+  </body>
+  <script src="/js/main.js"></script>
+</html>

@@ -51,8 +51,33 @@ var transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp
 // });
 
 app.get('/', function(req, res) {
+  var speeds = []
+  var duration = 60;
+  var dotCount = 20;
+  var osc = 40;
+
+  for (var i = 1; i < 20; i++) {
+    speeds.push((duration/ (dotCount + osc - i)));
+  }
   res.render('layout', {
-    is_production: is_production
+    is_production: is_production,
+    speeds: speeds
+  });
+})
+
+app.get('/star', function(req, res) {
+  var speeds = []
+  var duration = 60;
+  var dotCount = 20;
+  var osc = 40;
+
+  for (var i = 1; i < 20; i++) {
+    speeds.push((duration/ (dotCount + osc - i)));
+  }
+  res.render('star', {
+    layout: false,
+    is_production: is_production,
+    speeds: speeds
   });
 })
 

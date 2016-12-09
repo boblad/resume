@@ -1,0 +1,26 @@
+.star {
+  width: 100%;
+  float: left;
+  padding: 20px;
+  background: color(accent-1);
+
+  &__ball {
+    width: 10px;
+    height: 10px;
+    background: color(primary);
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+
+  &__wrap {
+    width: 200px;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+
+  @keyframes ball {
+    0% { margin-left: 0px; }
+    50% { margin-left: 200px; }
+    100% { margin-left: 0px; }
+  }
+}
