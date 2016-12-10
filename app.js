@@ -31,25 +31,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
-var transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
-
-// setup e-mail data with unicode symbols
-// var mailOptions = {
-//     from: '"Resume" <'+ config.fromEmailUsername +'>', // sender address
-//     to: config.emailUsername, // list of receivers
-//     subject: 'Response ✔', // Subject line
-//     text: 'Hello world 🐴', // plaintext body
-//     html: '<b>Hello world 🐴</b>' // html body
-// };
-
-// send mail with defined transport object
-// transporter.sendMail(mailOptions, function(error, info){
-//     if(error){
-//         return console.log(error);
-//     }
-//     console.log('Message sent: ' + info.response);
-// });
-
 app.get('/', function(req, res) {
   var speeds = []
   var duration = 60;
@@ -60,22 +41,6 @@ app.get('/', function(req, res) {
     speeds.push((duration/ (dotCount + osc - i)));
   }
   res.render('layout', {
-    is_production: is_production,
-    speeds: speeds
-  });
-})
-
-app.get('/star', function(req, res) {
-  var speeds = []
-  var duration = 60;
-  var dotCount = 20;
-  var osc = 40;
-
-  for (var i = 1; i < 20; i++) {
-    speeds.push((duration/ (dotCount + osc - i)));
-  }
-  res.render('star', {
-    layout: false,
     is_production: is_production,
     speeds: speeds
   });

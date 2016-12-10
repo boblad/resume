@@ -13,7 +13,7 @@
 
   &__title {
     text-align: center;
-    color: color(accent-2);
+    color: color(accent-5);
     font-size: 40px;
     padding: 35px;
   }
@@ -105,6 +105,10 @@
         height: 480px;
       }
     }
+    @media screen and (max-width: breakpoint(tablet)) {
+      height: 0;
+      overflow: hidden;
+    }
   }
 
   &__input-wrap {
@@ -123,16 +127,19 @@
   }
 
   &__input {
-    color: color(primary);
+    color: color(accent-1);
     width: 480px;
     float: right;
     height: 40px;
-    border: 2px solid color(secondary);
+    border: 5px solid color(accent-2);
     border-radius: 5px;
+    outline: none !important;
+    font-size: 18px;
+    padding: 5px;
 
     &:focus {
       outline: none !important;
-      border: 2px solid color(accent-1);
+      border: 5px solid color(primary);
     }
 
     @media screen and (max-width: breakpoint(tablet)) {
@@ -141,16 +148,18 @@
   }
 
   &__textarea {
-    color: color(primary);
+    color: color(accent-1);
     width: 480px;
     float: right;
     height: 120px;
-    border: 2px solid color(secondary);
+    border: 5px solid color(accent-2);
     border-radius: 5px;
+    font-size: 16px;
+    padding: 5px;
 
     &:focus {
       outline: none !important;
-      border: 2px solid color(accent-1);
+      border: 5px solid color(primary);
     }
 
     @media screen and (max-width: breakpoint(tablet)) {
@@ -169,8 +178,31 @@
     padding: 20px;
     background: color(primary);
     width: 300px;
-    color: color(accent-2);
+    color: white;
     border-radius: 50px;
+    border: 5px solid color(accent-2);
+
+    &-mobile {
+      display: none;
+      width: 100%;
+      text-align: center;
+      border-radius: 50px;
+      background: color(accent-1);
+      color: white;
+      position: absolute;
+      bottom: -280px;
+      padding: 20px;
+      border: 5px solid color(accent-2);
+
+      @media screen and (max-width: breakpoint(tablet)) {
+        display: block;
+      }
+    }
+
+    &-mobilewrap {
+      width: 100%;
+      float: left;
+    }
 
     @media screen and (max-width: breakpoint(tablet)) {
         display: none;

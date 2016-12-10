@@ -33,13 +33,13 @@
              $('#javascript').addClass('level-9');
              $('#html-skill').addClass('level-9');
              $('#css-scss').addClass('level-9');
-             $('#python').addClass('level-8');
+             $('#python').addClass('level-9');
              $('#c-plus-plus').addClass('level-8');
              $('#wordpress').addClass('level-7');
-             $('#unix').addClass('level-7');
+             $('#unix').addClass('level-8');
              $('#django').addClass('level-7');
              $('#php').addClass('level-5');
-             $('#rails').addClass('level-2');
+             $('#rails').addClass('level-5');
            }, 400)
          }
 
