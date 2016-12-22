@@ -54,8 +54,11 @@
          if (wS > (contactT+contactH-wH - 300)) {
            $('.contact__arrow-down').addClass('open');
            window.setTimeout(function() {
-             $('.contact__form').addClass('slide-out');
+             $('.mailbox').removeClass('hide');
            }, 1000)
+           window.setTimeout(function() {
+             $('.contact__form').addClass('slide-out first');
+           }, 1500)
          }
       });
 

@@ -24,7 +24,7 @@ gulp.task('sass:watch', function () {
 gulp.task('dev', function () {
   nodemon({
     script: 'app.js'
-    , ext: 'js html'
+    , ext: 'js html hbs'
   });
   env({
   vars: {

@@ -46,7 +46,8 @@
   float: left;
   width: 100%;
   height: 900px;
-  background-color: #45a6d0; }
+  background-color: #45a6d0;
+  position: relative; }
   .contact__head {
     width: 85%;
     height: 110px;
@@ -61,12 +62,23 @@
     width: 600px;
     height: 400px;
     background: #1E1A1D;
-    margin: 300px auto 0 auto;
-    position: relative; }
+    top: 300px;
+    right: calc(50% - 300px);
+    position: absolute;
+    -webkit-transition: .3s;
+    transition: .3s; }
     @media screen and (max-width: 767px) {
       .contact__mail {
         width: 300px;
         height: 0; } }
+    .contact__mail.send-mail {
+      -webkit-transition: 1s;
+      transition: 1s;
+      position: absolute;
+      right: -500px; }
+    .contact__mail.shrink {
+      -webkit-transform: scale(0.2);
+              transform: scale(0.2); }
   .contact__arrow-down {
     position: absolute;
     top: 0px;
@@ -79,12 +91,12 @@
     transition: top .6s linear, -webkit-transform .6s linear;
     transition: top .6s linear, transform .6s linear;
     transition: top .6s linear, transform .6s linear, -webkit-transform .6s linear;
+    -webkit-transform-origin: top;
+            transform-origin: top;
     z-index: 200; }
     .contact__arrow-down.open {
       -webkit-transform: rotateX(-180deg);
-              transform: rotateX(-180deg);
-      -webkit-transform-origin: top;
-              transform-origin: top; }
+              transform: rotateX(-180deg); }
     @media screen and (max-width: 767px) {
       .contact__arrow-down {
         border-left: 150px solid transparent;
@@ -128,11 +140,12 @@
     transition: top .3s, height .3s; }
     .contact__form.slide-out {
       height: 600px;
-      top: -280px;
-      z-index: 200; }
+      top: -280px; }
       @media screen and (max-width: 767px) {
         .contact__form.slide-out {
           height: 480px; } }
+    .contact__form.first {
+      z-index: 200; }
     @media screen and (max-width: 767px) {
       .contact__form {
         height: 0;
@@ -335,7 +348,7 @@
     border-bottom: 1px solid #D6D2D2; }
   .experience__title {
     text-align: center;
-    color: #D6D2D2;
+    color: white;
     font-size: 40px;
     padding: 35px; }
   .experience__content {
@@ -464,6 +477,61 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
+
+.mailbox {
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  background: #D6D2D2;
+  -webkit-transition: .3s;
+  transition: .3s; }
+  .mailbox__door {
+    width: 3px;
+    height: 100px;
+    position: absolute;
+    left: -3px;
+    background: #1E1A1D;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transition: .3s;
+    transition: .3s; }
+    .mailbox__door.open {
+      -webkit-transform: rotateZ(-90deg);
+              transform: rotateZ(-90deg); }
+  .mailbox__flag {
+    position: absolute;
+    top: 30%;
+    right: 10px;
+    width: 70px;
+    height: 5px;
+    background: #BB0A21;
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition: .3s;
+    transition: .3s; }
+    .mailbox__flag.up {
+      -webkit-transform: rotateZ(90deg);
+              transform: rotateZ(90deg); }
+  .mailbox__flag-top {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #BB0A21; }
+  .mailbox__stick {
+    position: absolute;
+    width: 20px;
+    height: 250px;
+    right: 0;
+    top: 100px;
+    background: #5f4d14; }
+  .mailbox.hide {
+    right: -300px; }
 
 * {
   margin: 0;

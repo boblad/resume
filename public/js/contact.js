@@ -21,5 +21,32 @@
       //   $('#email').removeClass('contact__focussed');
       // });
 
+      $('.contact__mail').click(function() {
+
+        $('.contact__form').removeClass('slide-out');
+        window.setTimeout(function() {
+          $('.contact__form').removeClass('first');
+        }, 200)
+        window.setTimeout(function() {
+          $('.contact__arrow-down').removeClass('open');
+        }, 1000)
+        window.setTimeout(function() {
+          $('.contact__mail').addClass('shrink');
+          $('.mailbox__door').addClass('open');
+        }, 1200)
+
+        window.setTimeout(function() {
+          $('.contact__mail').addClass('send-mail');
+        }, 2000)
+
+        window.setTimeout(function() {
+          $('.mailbox__door').removeClass('open');
+        }, 2500)
+
+        window.setTimeout(function() {
+          $('.mailbox__flag').addClass('up');
+        }, 2700)
+      })
+
     });
 })(jQuery);
