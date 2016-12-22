@@ -46,6 +46,10 @@
         window.setTimeout(function() {
           $('.mailbox__flag').addClass('up');
         }, 2700)
+
+        window.setTimeout(function() {
+          $('.contact__thank-you').addClass('show');
+        }, 2900)
       })
 
     });

@@ -4,6 +4,7 @@
   height: 900px;
   background-color: color(primary);
   position: relative;
+  overflow: hidden;
 
   &__head {
     width: 85%;
@@ -221,8 +222,23 @@
       float: left;
     }
 
+
     @media screen and (max-width: breakpoint(tablet)) {
         display: none;
+    }
+  }
+  &__thank-you {
+    width: 100%;
+    position: absolute;
+    bottom: -50px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .4s;
+
+    &.show {
+      bottom: 500px;
     }
   }
 }
