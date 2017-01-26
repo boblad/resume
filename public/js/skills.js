@@ -40,6 +40,8 @@
              $('#django').addClass('level-7');
              $('#php').addClass('level-5');
              $('#rails').addClass('level-5');
+             $('#java').addClass('level-6');
+             $('#native-android').addClass('level-5');
            }, 400)
          }
 

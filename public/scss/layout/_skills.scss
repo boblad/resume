@@ -1,7 +1,6 @@
 .skills {
   float: left;
   width: 100%;
-  height: 600px;
   background-color: color(accent-5);
 
   &__ball {
@@ -33,8 +32,8 @@
     margin-top: 40px;
 
     @media screen and (max-width: breakpoint(tablet)) {
+        margin-top: 0;
         width: 100%;
-        height: 300px;
     }
   }
 
@@ -64,7 +63,9 @@
     text-align: right;
   }
 
-  @media screen and (max-width: breakpoint(tablet)) {
-      height: 865px;
+  &__wrap {
+    width: 100%;
+    float: left;
+    padding: 20px 0;
   }
 }
