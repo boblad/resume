@@ -383,7 +383,7 @@
     font-size: 40px;
     padding: 35px; }
   .experience__content {
-    width: 40%;
+    width: 90%;
     position: relative;
     margin: 5%;
     float: left;
@@ -398,9 +398,6 @@
       -webkit-transform: rotateY(180deg);
               transform: rotateY(180deg);
       opacity: 0; }
-    @media screen and (max-width: 767px) {
-      .experience__content {
-        width: 90%; } }
   .experience__unordered-list {
     padding: 10px;
     list-style: none; }
@@ -441,6 +438,9 @@
   .experience__sub-item {
     font-size: 16px;
     padding: 5px; }
+
+#todays-date {
+  color: #BB0A21; }
 
 .header {
   float: left;
@@ -824,6 +824,11 @@
   padding-bottom: 30px; }
   .work__content {
     padding: 10px 10%; }
+  .work__client {
+    width: 100%;
+    float: left;
+    text-align: center;
+    color: white; }
   .work__head {
     width: 85%;
     margin: 0 auto;

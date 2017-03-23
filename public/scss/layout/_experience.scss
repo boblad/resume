@@ -20,7 +20,7 @@
   }
 
   &__content {
-    width: 40%;
+    width: 90%;
     position: relative;
     margin: 5%;
     float: left;
@@ -34,10 +34,6 @@
     &.flipped {
       transform: rotateY(180deg);
       opacity: 0;
-    }
-
-    @media screen and (max-width: breakpoint(tablet)) {
-      width: 90%;
     }
   }
 
@@ -96,4 +92,8 @@
     font-size: 16px;
     padding: 5px;
   }
+}
+
+#todays-date {
+  color: color(secondary);
 }
