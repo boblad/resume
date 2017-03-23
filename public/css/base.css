@@ -53,6 +53,14 @@
   background-color: #45a6d0;
   position: relative;
   overflow: hidden; }
+  .contact__animate {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center; }
+  .contact__click-here {
+    cursor: pointer;
+    color: white; }
   .contact__head {
     width: 85%;
     height: 110px;
@@ -102,6 +110,8 @@
     .contact__arrow-down.open {
       -webkit-transform: rotateX(-180deg);
               transform: rotateX(-180deg); }
+    .contact__arrow-down.open-back {
+      z-index: 0; }
     @media screen and (max-width: 767px) {
       .contact__arrow-down {
         border-left: 150px solid transparent;
@@ -138,19 +148,15 @@
     width: 100%;
     top: 0;
     position: absolute;
-    z-index: 100;
     background: #1E1A1D;
     height: 300px;
     -webkit-transition: top .3s, height .3s;
     transition: top .3s, height .3s; }
     .contact__form.slide-out {
-      height: 600px;
       top: -280px; }
       @media screen and (max-width: 767px) {
         .contact__form.slide-out {
           height: 480px; } }
-    .contact__form.first {
-      z-index: 200; }
     @media screen and (max-width: 767px) {
       .contact__form {
         height: 0;
@@ -207,7 +213,16 @@
     width: 300px;
     color: white;
     border-radius: 50px;
-    border: 5px solid #D6D2D2; }
+    border: 5px solid #D6D2D2;
+    position: absolute;
+    top: 240px;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    transition: .3s; }
+    .contact__submit.bring {
+      top: -35px; }
+    .contact__submit.bring-up {
+      z-index: 300; }
     .contact__submit-mobile {
       display: none;
       width: 100%;
@@ -555,7 +570,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Helvetica';
+  font-family: monospace;
   font-weight: 400; }
 
 .wrap {
@@ -577,6 +592,24 @@
     border-bottom: 1px solid #45a6d0;
     margin-bottom: 15px;
     padding: 10px 0; }
+  .personal__img {
+    width: calc(50% - 20px);
+    float: left;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border: 5px solid #D6D2D2;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px; }
+    @media screen and (max-width: 767px) {
+      .personal__img {
+        width: 100%;
+        margin: 10px 0 0 0; } }
+  .personal__gall {
+    width: 100%;
+    float: left;
+    padding: 20px; }
   .personal__title {
     text-align: center;
     color: #45a6d0;
@@ -593,7 +626,8 @@
   font-size: 30px;
   padding: 45px;
   -webkit-transition: .5s;
-  transition: .5s; }
+  transition: .5s;
+  min-height: 500px; }
   .profile__head {
     width: 85%;
     margin: 0 auto;
@@ -602,11 +636,13 @@
     font-size: 38px;
     padding: 20px; }
   .profile__section {
-    width: 100%;
-    margin-top: 40px;
+    width: 50%;
+    float: left;
     font-size: 16px;
-    position: relative;
-    padding-top: 110px; }
+    padding-top: 30px; }
+    @media screen and (max-width: 767px) {
+      .profile__section {
+        width: 100%; } }
   .profile__image {
     width: 250px;
     height: 250px;
@@ -618,13 +654,19 @@
     width: 250px;
     height: 250px;
     position: absolute;
-    left: calc(50% - 125px);
-    top: 0; }
+    left: calc(25% - 125px);
+    top: calc(50% - 125px); }
+    @media screen and (max-width: 767px) {
+      .profile__image-wrap {
+        position: relative;
+        margin: 0 auto;
+        left: auto;
+        top: auto; } }
   .profile__paragraph-wrap {
     border-radius: 25px;
-    width: 85%;
-    margin: 0 auto;
-    padding: 100px 15px 15px 15px;
+    width: 100%;
+    float: left;
+    padding: 15px;
     border: 3px solid #1E1A1D;
     background: white;
     -webkit-transition: 1s cubic-bezier(0.87, -0.41, 0.19, 1.44);
@@ -646,6 +688,10 @@
   .profile__title {
     font-size: 25px;
     margin-bottom: 20px; }
+  .profile__wrap {
+    width: 100%;
+    float: left;
+    position: relative; }
   .profile.flipped {
     -webkit-transform: rotateZ(180deg);
             transform: rotateZ(180deg); }

@@ -6,6 +6,18 @@
   position: relative;
   overflow: hidden;
 
+  &__animate {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+  }
+
+  &__click-here {
+    cursor: pointer;
+    color: white;
+  }
+
   &__head {
     width: 85%;
     height: 110px;
@@ -61,6 +73,10 @@
         transform: rotateX(-180deg);
       }
 
+      &.open-back {
+        z-index: 0;
+      }
+
       @media screen and (max-width: breakpoint(tablet)) {
         border-left: 150px solid transparent;
         border-right: 150px solid transparent;
@@ -105,13 +121,12 @@
     width: 100%;
     top: 0;
     position: absolute;
-    z-index: 100;
     background: color(accent-1);
     height: 300px;
     transition: top .3s, height .3s;
+    // z-index: 250;
 
     &.slide-out {
-      height: 600px;
       top: -280px;
 
       @media screen and (max-width: breakpoint(tablet)) {
@@ -120,7 +135,7 @@
     }
 
     &.first {
-      z-index: 200;
+      // z-index: 200;
     }
 
     @media screen and (max-width: breakpoint(tablet)) {
@@ -199,6 +214,18 @@
     color: white;
     border-radius: 50px;
     border: 5px solid color(accent-2);
+    position: absolute;
+    top: 240px;
+    cursor: pointer;
+    transition: .3s;
+
+    &.bring {
+      top: -35px;
+    }
+
+    &.bring-up {
+      z-index: 300;
+    }
 
     &-mobile {
       display: none;

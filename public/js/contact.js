@@ -1,34 +1,19 @@
 ;(function ($){
     $(function() {
-      // $('#subject').focus(function() {
-      //   $('#subject').addClass('contact__focussed');
-      // });
-      // $('#subject').focusout(function() {
-      //   $('#subject').removeClass('contact__focussed');
-      // });
-      //
-      // $('#message').focus(function() {
-      //   $('#message').addClass('contact__focussed');
-      // });
-      // $('#message').focusout(function() {
-      //   $('#message').removeClass('contact__focussed');
-      // });
-      //
-      // $('#email').focus(function() {
-      //   $('#email').addClass('contact__focussed');
-      // });
-      // $('#email').focusout(function() {
-      //   $('#email').removeClass('contact__focussed');
-      // });
 
-      $('.contact__mail').click(function() {
-
+      var mailAnim = function() {
         $('.contact__form').removeClass('slide-out');
         window.setTimeout(function() {
           $('.contact__form').removeClass('first');
         }, 200)
         window.setTimeout(function() {
           $('.contact__arrow-down').removeClass('open');
+          $('.contact__arrow-down').removeClass('open-back');
+
+
+          $('.contact__submit').removeClass('bring');
+          $('.contact__submit').removeClass('bring-up');
+
         }, 1000)
         window.setTimeout(function() {
           $('.contact__mail').addClass('shrink');
@@ -50,6 +35,28 @@
         window.setTimeout(function() {
           $('.contact__thank-you').addClass('show');
         }, 2900)
+      }
+
+      $('.contact__submit').click(function() {
+        var data = {
+          email: $('#email').val(),
+          message: $('#message').val(),
+        }
+        $.ajax({
+          url: '/contact/',
+          type: 'POST',
+          data: data,
+          success: function(res) {
+            mailAnim();
+          },
+          error: function(err) {
+            console.log('err', err)
+          }
+        })
+      })
+
+      $('.contact__click-here').click(function() {
+        mailAnim();
       })
 
     });

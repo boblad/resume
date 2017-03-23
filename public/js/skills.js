@@ -1,6 +1,6 @@
 ;(function ($){
     $(function() {
-
+      var hasOpened = false;
       $(window).scroll(function() {
          var skillsT = $('.skills__section').offset().top;
          var skillsH = $('.skills__section').outerHeight();
@@ -19,11 +19,6 @@
 
          var contactT = $('.contact').offset().top;
          var contactH = $('.contact').outerHeight();
-
-         if (wS > (profileT+profileH-wH - 300)) {
-            $('.profile__paragraph-wrap').removeClass('closed');
-         }
-
 
 
          if (wS > (skillsT+skillsH-wH)) {
@@ -53,14 +48,20 @@
            $('#experience-2').removeClass('flipped');
          }
 
-         if (wS > (contactT+contactH-wH - 300)) {
+         if (wS > (contactT+contactH-wH - 300) && hasOpened == false) {
+           hasOpened = true
            $('.contact__arrow-down').addClass('open');
            window.setTimeout(function() {
              $('.mailbox').removeClass('hide');
            }, 1000)
            window.setTimeout(function() {
+             $('.contact__arrow-down').addClass('open-back');
              $('.contact__form').addClass('slide-out first');
+             $('.contact__submit').addClass('bring');
            }, 1500)
+           window.setTimeout(function() {
+             $('.contact__submit').addClass('bring-up');
+           }, 2000)
          }
       });
 

@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var hbs = require('hbs');
 var moment = require('moment');
 var nodemailer = require('nodemailer');
-// var config = require('./config');
+var config = require('./config');
 
 var app = express();
 
@@ -31,6 +31,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
+
+var transporter = nodemailer.createTransport('smtps://' + config.senderEmail + ':' + config.senderPassword + '@smtp.gmail.com');
+
+
 app.get('/', function(req, res) {
   var speeds = []
   var duration = 60;
@@ -46,8 +50,23 @@ app.get('/', function(req, res) {
   });
 })
 
-app.post('/', function(req, res) {
-  res.send('hi')
+app.post('/contact', function(req, res) {
+  var mailOptions = {
+    from: '"Your web site" <' + config.senderEmail + '>', // sender address
+    to: config.senderEmail, // list of receivers
+    subject: 'Contact', // Subject line
+    text: req.body.email + ' : ' + req.body.message,
+    html: req.body.email + ' : ' + req.body.message
+  };
+
+  transporter.sendMail(mailOptions, function(error, info){
+    if(error) {
+      return console.log(error);
+      res.send('An Error Occurred');
+    }
+    console.log('Message sent: ' + info.response);
+    res.send('Thank you! We will be in contact soon.');
+  });
 })
 
 
