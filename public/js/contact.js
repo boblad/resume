@@ -3,6 +3,8 @@
 
       var mailAnim = function() {
         $('.contact__form').removeClass('slide-out');
+        $('.contact__submit').removeClass('bring');
+        $('.contact__submit').removeClass('bring-up');
         window.setTimeout(function() {
           $('.contact__form').removeClass('first');
         }, 200)
@@ -10,9 +12,6 @@
           $('.contact__arrow-down').removeClass('open');
           $('.contact__arrow-down').removeClass('open-back');
 
-
-          $('.contact__submit').removeClass('bring');
-          $('.contact__submit').removeClass('bring-up');
 
         }, 1000)
         window.setTimeout(function() {
