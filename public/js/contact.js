@@ -36,7 +36,7 @@
         }, 2900)
       }
 
-      $('.contact__submit').click(function() {
+      var submitForm = function() {
         var data = {
           email: $('#email').val(),
           message: $('#message').val(),
@@ -52,6 +52,14 @@
             console.log('err', err)
           }
         })
+      }
+
+      $('.contact__submit').click(function() {
+        submitForm();
+      })
+
+      $('.contact__submit-mobile').click(function() {
+        submitForm();
       })
 
       $('.contact__click-here').click(function() {

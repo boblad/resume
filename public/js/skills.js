@@ -34,9 +34,9 @@
              $('#unix').addClass('level-8');
              $('#django').addClass('level-7');
              $('#php').addClass('level-5');
-             $('#rails').addClass('level-5');
+             $('#rails').addClass('level-6');
              $('#java').addClass('level-7');
-             $('#native-android').addClass('level-5');
+             $('#native-android').addClass('level-6');
            }, 400)
          }
 

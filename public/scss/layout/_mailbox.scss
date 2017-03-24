@@ -59,4 +59,8 @@
   &.hide {
     right: -300px;
   }
+
+  @media screen and (max-width: breakpoint(tablet)) {
+      display: none;
+  }
 }

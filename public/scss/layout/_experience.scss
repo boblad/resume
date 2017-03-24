@@ -4,6 +4,12 @@
   width: 100%;
   background-color: color(primary);
 
+  &__paragraph {
+    width: 100%;
+    float: left;
+    padding: 20px 45px;
+  }
+
   &__head {
     width: 85%;
     height: 110px;
@@ -24,7 +30,6 @@
     position: relative;
     margin: 5%;
     float: left;
-    height: 500px;
     background: color(accent-5);
     transition: .7s;
     border-radius: 15px;
@@ -38,13 +43,22 @@
   }
 
   &__unordered-list {
-    padding: 10px;
+    width: 100%;
+    float: left;
+    padding: 20px;
     list-style: none;
   }
 
   &__unordered-item {
     padding: 5px 10px;
     list-style: none;
+    width: 50%;
+    float: left;
+    text-align: center;
+
+    @media screen and (max-width: breakpoint(tablet)) {
+        width: 100%;
+    }
   }
 
   &__item {

@@ -83,7 +83,8 @@
     @media screen and (max-width: 767px) {
       .contact__mail {
         width: 300px;
-        height: 0; } }
+        right: calc(50% - 150px);
+        height: 200px; } }
     .contact__mail.send-mail {
       -webkit-transition: 1s;
       transition: 1s;
@@ -231,8 +232,9 @@
       background: #1E1A1D;
       color: white;
       position: absolute;
-      bottom: -280px;
+      bottom: -100px;
       padding: 20px;
+      cursor: pointer;
       border: 5px solid #D6D2D2; }
       @media screen and (max-width: 767px) {
         .contact__submit-mobile {
@@ -371,6 +373,10 @@
   position: relative;
   width: 100%;
   background-color: #45a6d0; }
+  .experience__paragraph {
+    width: 100%;
+    float: left;
+    padding: 20px 45px; }
   .experience__head {
     width: 85%;
     height: 110px;
@@ -387,7 +393,6 @@
     position: relative;
     margin: 5%;
     float: left;
-    height: 500px;
     background: white;
     -webkit-transition: .7s;
     transition: .7s;
@@ -399,11 +404,19 @@
               transform: rotateY(180deg);
       opacity: 0; }
   .experience__unordered-list {
-    padding: 10px;
+    width: 100%;
+    float: left;
+    padding: 20px;
     list-style: none; }
   .experience__unordered-item {
     padding: 5px 10px;
-    list-style: none; }
+    list-style: none;
+    width: 50%;
+    float: left;
+    text-align: center; }
+    @media screen and (max-width: 767px) {
+      .experience__unordered-item {
+        width: 100%; } }
   .experience__item {
     padding: 5px;
     font-size: 20px; }
@@ -565,6 +578,9 @@
     background: #5f4d14; }
   .mailbox.hide {
     right: -300px; }
+  @media screen and (max-width: 767px) {
+    .mailbox {
+      display: none; } }
 
 * {
   margin: 0;

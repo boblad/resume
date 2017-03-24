@@ -59,13 +59,14 @@ app.post('/contact', function(req, res) {
     html: req.body.email + ' : ' + req.body.message
   };
 
-  transporter.sendMail(mailOptions, function(error, info){
-    if(error) {
-      return console.log(error);
+  transporter.sendMail(mailOptions, function(error, info) {
+    if (error) {
+      return console.log('err', error);
       res.send('An Error Occurred');
+    } else {
+      console.log('Message sent: ' + info.response);
+      res.send('Thank you! We will be in contact soon.');
     }
-    console.log('Message sent: ' + info.response);
-    res.send('Thank you! We will be in contact soon.');
   });
 })
 
