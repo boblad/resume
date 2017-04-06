@@ -1,0 +1,55 @@
+.awards {
+  float: left;
+  width: 100%;
+  background-color: color(primary);
+  border-top: 5px solid color(accent-2);
+  padding-bottom: 30px;
+
+  &__content {
+    padding: 10px 10%;
+  }
+
+  &__head {
+    width: 85%;
+    margin: 0 auto;
+    border-bottom: 1px solid color(accent-2);
+  }
+
+  &__item {
+	width: 100%;
+	float: left;
+	text-align: center;	
+  }
+
+  &__image {
+    width: 100%;
+	display: block;
+	margin: 20px auto;
+    object-fit: cover;
+	max-width: 800px;
+    height: 600px;
+    background: white;
+    border: 5px solid color(accent-2);
+	border-radius: 20px;
+
+    @media screen and (max-width: breakpoint(tablet)) {
+		height: 400px;
+    }
+  }
+
+  &__paragraph {
+	background: white;
+	border: 5px solid color(accent-2);
+	padding: 10px;
+	line-height: 1.5;
+	margin: 10px 0;
+	border-radius: 20px;
+  }
+
+  &__title {
+    text-align: center;
+    color: color(accent-5);
+    font-size: 40px;
+    padding: 35px;
+  }
+}

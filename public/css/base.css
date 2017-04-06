@@ -46,6 +46,49 @@
   width: 100%;
   float: left; }
 
+.awards {
+  float: left;
+  width: 100%;
+  background-color: #45a6d0;
+  border-top: 5px solid #D6D2D2;
+  padding-bottom: 30px; }
+  .awards__content {
+    padding: 10px 10%; }
+  .awards__head {
+    width: 85%;
+    margin: 0 auto;
+    border-bottom: 1px solid #D6D2D2; }
+  .awards__item {
+    width: 100%;
+    float: left;
+    text-align: center; }
+  .awards__image {
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 800px;
+    height: 600px;
+    background: white;
+    border: 5px solid #D6D2D2;
+    border-radius: 20px; }
+    @media screen and (max-width: 767px) {
+      .awards__image {
+        height: 400px; } }
+  .awards__paragraph {
+    background: white;
+    border: 5px solid #D6D2D2;
+    padding: 10px;
+    line-height: 1.5;
+    margin: 10px 0;
+    border-radius: 20px; }
+  .awards__title {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    padding: 35px; }
+
 .contact {
   float: left;
   width: 100%;
