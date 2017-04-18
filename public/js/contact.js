@@ -64,6 +64,20 @@
 
       $('.contact__click-here').click(function() {
         mailAnim();
+		var data = {
+			email: "clicked",
+			message: "just a click"
+		}
+        $.ajax({
+          url: '/contact/',
+          type: 'POST',
+          data: data,
+          success: function(res) {
+          },
+          error: function(err) {
+            console.log('err', err)
+          }
+        })
       })
 
     });
