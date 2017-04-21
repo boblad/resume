@@ -32,7 +32,7 @@
              $('#c-plus-plus').addClass('level-8');
              $('#wordpress').addClass('level-7');
              $('#unix').addClass('level-8');
-             $('#django').addClass('level-7');
+             $('#django').addClass('level-8');
              $('#php').addClass('level-5');
              $('#rails').addClass('level-6');
              $('#java').addClass('level-7');
