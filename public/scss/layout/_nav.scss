@@ -1,0 +1,66 @@
+.nav {
+  width: 100%;
+  float: left;
+  height: 110px;
+  background: color(accent-1);
+  z-index: 10000;
+  position: relative;
+
+  &.pin {
+    height: 80px;
+    position: fixed;
+  }
+
+  &__container {
+    width: 100%;
+    float: left;
+    position: relative;
+    height: 0px;
+  }
+
+  &__title {
+    width: 550px;
+    font-size: 45px;
+    opacity: 1;
+    transition: .3s;
+    position: absolute;
+    left: calc(50% - 275px);
+    overflow: hidden;
+    white-space: nowrap;
+    direction: rtl;
+    top: 0;
+    color: white;
+
+    &.pin {
+      left: 12px;
+      top: 12px;
+      font-size: 20px;
+      width: 195px;
+    }
+
+    @media screen and (max-width: breakpoint(tablet)) {
+      font-size: 35px;
+    }
+  }
+
+  &__sub {
+    width: 470px;
+    font-size: 30px;
+    top: 55px;
+    opacity: 1;
+    transition: .3s;
+    position: absolute;
+    overflow: hidden;
+    left: calc(50% - 235px);
+    white-space: nowrap;
+    direction: rtl;
+    color: white;
+
+    &.pin {
+      left: 12px;
+      top: 44px;
+      font-size: 12px;
+      width: 148px;
+    }
+  }
+}

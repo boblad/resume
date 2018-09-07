@@ -22,13 +22,186 @@
   </head>
   <body>
     <div class="wrap">
-      {{> head }}
-      {{> profile }}
-      {{> skills }}
+      <div class="star">
+        <div class="star__wrap">
+          {{#each speeds}}
+          <div class="star__ball" style="animation: ball {{this}}s infinite ease-in-out;"></div>
+          {{/each}}
+          <div class="res-clear"></div>
+        </div>
+      </div>
+      <div class="nav__container"></div>
+      <div class="nav">
+        <h2 class="nav__title opaque">Hi, I'm Bryant Oblad</h2>
+        <h4 class="nav__sub opaque">I'm a Full Stack Developer</h4>
+      </div>
+      <div class="profile">
+        <h2 class="profile__head">
+          Profile
+        </h2>
+        <div class="profile__wrap">
+          <div class="profile__section">
+            <div class="profile__image-wrap">
+              <img class="profile__image" src="../images/professional.png">
+            </div>
+          </div>
+          <div class="profile__section">
+            <h3 class="profile__title">ABOUT ME</h3>
+            <div class="profile__paragraph-wrap restrict">
+              <p class="profile__paragraph">
+                I love to code and learn new things. Everyday I strive to
+                better my programming skills and to get into new topics that force
+                me to progress in my field. I love working with fellow developers and finding
+                the best possible solution for the task at hand, whether that is an implementation
+                or choice of tool. I take pride in my projects so I put in extra effort to make sure things are done right.
+                My favorite moments as a developer are when I get stumped, because I find it very rewarding
+                when I fix those difficult problems.
+              </p>
+              <p class="profile__paragraph">
+                My personal programming goal is to learn something interesting and useful every day.
+              </p>
+              <p class="profile__paragraph">
+                I love being a software developer.
+              </p>
+            </div>
+          </div>
+          <div class="res-clear"></div>
+        </div>
+        <div class="res-clear"></div>
+      </div>
+      <div class="skills">
+        <div class="skills__head">
+          <h3 class="skills__title">Skills</h3>
+        </div>
+        <div class="skills__wrap">
+          <div class="skills__section">
+            <h4 class="skills__label">react + redux</h4>
+            <div class="skills__progress-wrap">
+              <div class="skills__progress" id="react">
+                <div class="skills__ball"></div>
+              </div>
+            </div>
+            <h4 class="skills__label">react-native (ios & android)</h4>
+            <div class="skills__progress-wrap">
+              <div class="skills__progress" id="react-native">
+                <div class="skills__ball"></div>
+              </div>
+            </div>
+            <h4 class="skills__label">javascript/nodejs</h4>
+            <div class="skills__progress-wrap">
+              <div class="skills__progress" id="javascript">
+                <div class="skills__ball"></div>
+              </div>
+            </div>
+            <h4 class="skills__label">html</h4>
+            <div class="skills__progress-wrap">
+              <div class="skills__progress" id="html-skill">
+                <div class="skills__ball"></div>
+              </div>
+            </div>
+            <h4 class="skills__label">css & scss</h4>
+            <div class="skills__progress-wrap">
+              <div class="skills__progress" id="css-scss">
+                <div class="skills__ball"></div>
+              </div>
+            </div>
+            <h4 class="skills__label">c++</h4>
+            <div class="skills__progress-wrap">
+              <div class="skills__progress" id="c-plus-plus">
+                <div class="skills__ball"></div>
+              </div>
+            </div>
+            <h4 class="skills__label">java</h4>
+            <div class="skills__progress-wrap">
+              <div class="skills__progress" id="java">
+                <div class="skills__ball"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skills__section">
+            <h4 class="skills__label">python</h4>
+            <div class="skills__progress-wrap">
+              <div class="skills__progress" id="python">
+                <div class="skills__ball"></div>
+              </div>
+            </div>
+            <h4 class="skills__label">django + django rest</h4>
+            <div class="skills__progress-wrap">
+              <div class="skills__progress" id="django">
+                <div class="skills__ball"></div>
+              </div>
+            </div>
+            <h4 class="skills__label">unix + servers</h4>
+            <div class="skills__progress-wrap">
+              <div class="skills__progress" id="unix">
+                <div class="skills__ball"></div>
+              </div>
+            </div>
+            <h4 class="skills__label">wordpress</h4>
+            <div class="skills__progress-wrap">
+              <div class="skills__progress" id="wordpress">
+                <div class="skills__ball"></div>
+              </div>
+            </div>
+            <h4 class="skills__label">php</h4>
+            <div class="skills__progress-wrap">
+              <div class="skills__progress" id="php">
+                <div class="skills__ball"></div>
+              </div>
+            </div>
+            <h4 class="skills__label">ruby on rails</h4>
+            <div class="skills__progress-wrap">
+              <div class="skills__progress" id="rails">
+                <div class="skills__ball"></div>
+              </div>
+            </div>
+            <h4 class="skills__label">native android</h4>
+            <div class="skills__progress-wrap">
+              <div class="skills__progress" id="native-android">
+                <div class="skills__ball"></div>
+              </div>
+            </div>
+          </div>
+        <div class="res-clear"></div>
+        </div>
+      </div>
 
       <div class="experience">
         <div class="experience__head">
           <h3 class="experience__title">Experience</h3>
+        </div>
+        <div class="experience__content flipped" id="experience-0">
+          <div class="full-wrap">
+            <img class="experience__image--nima" src="../images/logo-nima.png">
+          </div>
+          <h3 class="experience__category">Nima</h3>
+          <div class="experience__sub">
+            <p class="experience__sub-item">-Full Stack Developer-</p>
+            <p class="experience__sub-item" id="todays-date">Aug 7, 2016 - </p>
+          </div>
+          <p class="experience__paragraph">
+            I am a full stack developer at PXP. I am a dev lead on many of my
+            projects and I maintain a relationship with several clients as well as
+            make sure the codebase is moving at a sufficient rate. I do front-end work,
+            back-end restful work, server work, and native work.
+          </p>
+          <ul class="experience__unordered-list">
+            <li class="experience__unordered-item">HTML & postCSS & SCSS</li>
+            <li class="experience__unordered-item">React + Redux</li>
+            <li class="experience__unordered-item">React-native</li>
+            <li class="experience__unordered-item">Django Rest Framework</li>
+            <li class="experience__unordered-item">PostgreSQL/MySQL</li>
+            <li class="experience__unordered-item">MongoDB</li>
+            <li class="experience__unordered-item">RealmDB</li>
+            <li class="experience__unordered-item">Django</li>
+            <li class="experience__unordered-item">Flask</li>
+            <li class="experience__unordered-item">Nodejs</li>
+            <li class="experience__unordered-item">Config and Deploy Servers</li>
+            <li class="experience__unordered-item">Git</li>
+            <li class="experience__unordered-item">Wordpress</li>
+            <li class="experience__unordered-item">Native Android (Java)</li>
+            <li class="experience__unordered-item">Nginx or Apache</li>
+          </ul>
         </div>
         <div class="experience__content flipped" id="experience-1">
           <div class="full-wrap">
@@ -37,7 +210,7 @@
           <h3 class="experience__category">Pony Express Productions</h3>
           <div class="experience__sub">
             <p class="experience__sub-item">-Full Stack Developer-</p>
-            <p class="experience__sub-item" id="todays-date">Jan 1, 2016 - </p>
+            <p class="experience__sub-item">Nov 1, 2015 - Sept 1, 2017</p>
           </div>
           <p class="experience__paragraph">
             I am a full stack developer at PXP. I am a dev lead on many of my
@@ -134,25 +307,21 @@
         <!-- <p class="work__etc">And many more!<p> -->
         <div class="res-clear"></div>
       </div>
-	
-
-	  <div class="awards">
-		<div class="awards__head">
-			<h3 class="awards__title">Awards and Accomplishments</h3>
-		</div>
-		<div class="awards__content">
-			<h2 class="awards__item">2nd place at USU ACM coding competetion</h2>
-			<div class="res-clear"></div>
-			<img class="awards__image" src="../images/ACM.jpg">
-			<p class="awards__paragraph">
-				On March 31, 2017, my co-worker and I competed in the largest coding competion
-				USU has ever sponsored. The competition was four hours long and over 180 students competed.
-				My teammate and I took second place out of the whole competition.	
-			</p>
-		</div>
-	  </div>
-
-
+  	  <div class="awards">
+    		<div class="awards__head">
+    			<h3 class="awards__title">Awards and Accomplishments</h3>
+    		</div>
+    		<div class="awards__content">
+    			<h2 class="awards__item">2nd place at USU ACM coding competetion</h2>
+    			<div class="res-clear"></div>
+    			<img class="awards__image" src="../images/ACM.jpg">
+    			<p class="awards__paragraph">
+    				On March 31, 2017, my co-worker and I competed in the largest coding competion
+    				USU has ever sponsored. The competition was four hours long and over 180 students competed.
+    				My teammate and I took second place out of the whole competition.
+    			</p>
+    		</div>
+  	  </div>
       <div class="personal">
         <div class="personal__head">
           <h3 class="personal__title">Personal Projects</h3>

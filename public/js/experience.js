@@ -1,6 +1,6 @@
 ;(function ($){
     $(function() {
-      var prefixText = "Jan 1, 2016 - ";
+      var prefixText = "Aug 7, 2016 - ";
       var monthNames = [
         "Jan", "Feb", "Mar",
         "Apr", "May", "Jun", "Jul",

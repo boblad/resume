@@ -12,23 +12,21 @@
   }
 
   &__head {
-    width: 85%;
-    height: 110px;
+    width: 100%;
+    padding: 35px 20px;
     margin: 0 auto;
     border-bottom: 1px solid color(accent-2);
+    max-width: breakpoint(tablet-lg);
   }
 
   &__title {
     text-align: center;
     color: color(primary);
     font-size: 40px;
-    padding: 35px;
   }
 
   &__section {
-    width: 50%;
-    float: left;
-    padding: 5px 20px;
+    width: calc(50% - 10px);
     margin-top: 40px;
 
     @media screen and (max-width: breakpoint(tablet)) {
@@ -65,7 +63,11 @@
 
   &__wrap {
     width: 100%;
-    float: left;
-    padding: 20px 0;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: breakpoint(tablet-lg);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
   }
 }

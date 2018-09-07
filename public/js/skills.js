@@ -1,7 +1,33 @@
 ;(function ($){
     $(function() {
       var hasOpened = false;
+      let leftStart = $('.nav__title').offset().left;
+      let titleWidth = $('.nav__title').width();
+      let finalWidth = 195;
+      let navDistanceTop = $('.nav__container').offset().top;
+      let fontSizeStart = 45;
+      let fontSizeEnd = 20;
+
+      let sizeRatio = (fontSizeStart - fontSizeEnd) / leftStart 
+      console.log('asdfff', 25 / navDistanceTop)
+      console.log('siz', sizeRatio)
+
       $(window).scroll(function() {
+        let distanceFromTop = $('.nav__container').offset().top - window.pageYOffset;
+
+        console.log('sizeR', distanceFromTop)
+
+        if (window.pageYOffset > $('.nav__container').offset().top && $('.nav').hasClass('pin') === false) {
+          console.log('greater')
+          $('.nav').addClass('pin')
+          $('.nav__title').addClass('pin')
+          $('.nav__sub').addClass('pin')
+        } else if (window.pageYOffset <= $('.nav__container').offset().top && $('.nav').hasClass('pin')) {
+          $('.nav').removeClass('pin')
+          $('.nav__title').removeClass('pin')
+          $('.nav__sub').removeClass('pin')
+        }
+
          var skillsT = $('.skills__section').offset().top;
          var skillsH = $('.skills__section').outerHeight();
 
@@ -10,6 +36,9 @@
 
          var profileT = $('.profile').offset().top;
          var profileH = $('.profile').outerHeight();
+
+         var experienceT0 = $('#experience-0').offset().top;
+         var experienceH0 = $('#experience-0').outerHeight();
 
          var experienceT1 = $('#experience-1').offset().top;
          var experienceH1 = $('#experience-1').outerHeight();
@@ -21,7 +50,7 @@
          var contactH = $('.contact').outerHeight();
 
 
-         if (wS > (skillsT+skillsH-wH)) {
+         if (wS > (skillsT + skillsH - wH)) {
            window.setTimeout(function() {
              $('#react').addClass('level-9');
              $('#react-native').addClass('level-9');
@@ -38,6 +67,10 @@
              $('#java').addClass('level-7');
              $('#native-android').addClass('level-6');
            }, 400)
+         }
+
+         if (wS > (experienceT0+experienceH0-wH - 300)) {
+           $('#experience-0').removeClass('flipped');
          }
 
          if (wS > (experienceT1+experienceH1-wH - 300)) {

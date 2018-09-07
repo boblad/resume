@@ -1,10 +1,10 @@
 ;(function ($){
     $(function() {
       window.setTimeout(function() {
-        $('.header__title').removeClass('opaque');
-        $('.header__middle').removeClass('opaque');
+        $('.nav__title').removeClass('opaque');
+        $('.nav__sub').removeClass('opaque');
         window.setTimeout(function() {
-          $('.header__sub-title').removeClass('opaque');
+          $('.nav__sub-title').removeClass('opaque');
         }, 1800)
       }, 200)
     });

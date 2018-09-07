@@ -22,23 +22,14 @@
   }
 
   &__title {
+    width: 100%;
     font-size: 45px;
-    padding: 25px;
     opacity: 1;
     transition: 2s;
+    max-width: 550px;
 
     @media screen and (max-width: breakpoint(tablet)) {
       font-size: 35px;
-    }
-  }
-
-  &__middle {
-    font-size: 22px;
-    padding: 5px;
-    transition: 2s;
-
-    @media screen and (max-width: breakpoint(tablet)) {
-      font-size: 18px;
     }
   }
 
@@ -46,6 +37,7 @@
     font-size: 30px;
     padding: 25px;
     transition: 2s;
-
+    color: white;
   }
+
 }

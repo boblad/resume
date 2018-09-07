@@ -28,13 +28,13 @@
   &__content {
     width: 90%;
     position: relative;
-    margin: 5%;
-    float: left;
+    margin: 5% auto;
     background: color(accent-5);
     transition: .7s;
     border-radius: 15px;
     border: 4px solid color(accent-2);
     overflow: hidden;
+    max-width: breakpoint(tablet-lg);
 
     &.flipped {
       transform: rotateY(180deg);
@@ -81,6 +81,14 @@
     float: none;
     width: 140px;
     height: 60px;
+    object-fit: cover;
+    display: block;
+    margin: 10px auto 0 auto;
+  }
+
+  &__image--nima {
+    float: none;
+    width: 140px;
     object-fit: cover;
     display: block;
     margin: 10px auto 0 auto;

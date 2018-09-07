@@ -10,7 +10,6 @@
   transition: .5s;
   min-height: 500px;
 
-
   &__head {
     width: 85%;
     margin: 0 auto;
@@ -18,6 +17,7 @@
     text-align: center;
     font-size: 38px;
     padding: 20px;
+    max-width: breakpoint(tablet-lg);
   }
 
   &__section {
@@ -90,8 +90,9 @@
 
   &__wrap {
     width: 100%;
-    float: left;
+    max-width: breakpoint(tablet-lg);
     position: relative;
+    margin: 0 auto;
   }
 
   &.flipped {
