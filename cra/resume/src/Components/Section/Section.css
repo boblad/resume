@@ -1,0 +1,15 @@
+.re-section {
+  width: 100%;
+  display: flex;
+  padding: 12px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.re-section__header {
+  width: 100%;
+  float: left; 
+  padding: 12px;
+  text-align: center;
+}
+
